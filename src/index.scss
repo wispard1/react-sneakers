@@ -45,8 +45,6 @@ h5 {
   font-size: 14px;
 }
 
-
-
 .button {
   background-color: white;
   border: none;
@@ -89,10 +87,10 @@ h5 {
   background-color: #ffffff;
   box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.01);
   padding: 30px;
- 
+
   .items {
     flex: 1;
-    overflow: auto;
+    overflow: hidden;
     margin-bottom: 40px;
   }
 
@@ -101,12 +99,18 @@ h5 {
   }
 
   .cartTotalBlock {
+    position: absolute;
+    display: block;
+    flex-direction: column;
+    width: 400px;
+    bottom: 40px;
+
     ul {
       margin-bottom: 40px;
       li {
         display: flex;
         align-items: flex-end;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
       div {
         flex: 1;
@@ -117,21 +121,20 @@ h5 {
         margin: 0 7px;
       }
     }
-    .greenButton{
+    .greenButton {
       position: relative;
 
-      &:hover{
-        img{
+      &:hover {
+        img {
           transform: translateX(5px);
         }
       }
 
-      img{
+      img {
         position: absolute;
         right: 30px;
         top: 22px;
         transition: transform 0.15s ease-in-out;
-
       }
     }
   }
@@ -163,9 +166,8 @@ h5 {
   padding: 10px;
   border-radius: 20px;
   margin: 20px;
-  overflow: hidden;
   padding: 20px;
-  width: 340px;
+  width: 390px;
 
   p {
     font-size: 16px;
